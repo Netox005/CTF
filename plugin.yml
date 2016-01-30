@@ -1,0 +1,26 @@
+name: CaptureTheFlag
+version: 0.9
+main: me.netux.ctf.main
+commands:
+  join:
+    description: Join the game
+  leave:
+    description: Leave the game
+  game:
+    description: Admin Commands
+    aliases: [ctf, ctw]
+  switch:
+    description: Switch Teams
+  rotation:
+    description: See the rotation.
+    aliases: rot
+  stats:
+    description: See stats.
+  channel:
+    description: Select a Chat Channel
+    aliases: ch
+  kit:
+    description: Choose a Kit.
+    aliases: class
+  toggle:
+    description: Toggle Settings.

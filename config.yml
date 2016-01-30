@@ -1,0 +1,8 @@
+# CaptureTheFlag v1.0 by Netux (netox_max) #
+cycle: ''
+timers:
+  start: 60
+  attempt: 20
+  cicler: 30
+  anouncer: 6000
+  broadcaster: 6000

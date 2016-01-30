@@ -1,0 +1,104 @@
+info:
+  display-name: 'Map'
+  authors: 'CaptureTheFlag'
+  spectators-spawn: 0.5, 50.1, 0.5, 0, 0
+  rain: false
+  timemove: false
+teams:
+  red-team:
+    display-name: 'Red Team'
+    max-players: 16
+    color: 'RED'
+    spawn:
+    - spawn-red
+    flags:
+    - red-flag
+    capture:
+    - capture-red
+    kits:
+    - soldier
+  blue-team:
+    display-name: 'Blue Team'
+    color: 'BLUE'
+    spawn:
+    - spawn-blue
+    flags:
+    - blue-flag
+    capture:
+    - capture-blue
+    kits:
+    - soldier
+    max-players: 16
+flags:
+  red-flag:
+    display-name: 'Red Flag'
+    location: 0.5, 50.1, 0.5, 0, 0
+  blue-flag:
+    display-name: 'Blue Flag'
+    location: 0.5, 50.1, 0.5, 0, 0
+kits:
+  default:
+    display-name: 'Kit'
+    items:
+      1:
+        type: 'IRON_SWORD'
+        name: '&lSoldier Sword'
+        lore:
+        - '&6Use this to combat your enemies!'
+        amount: 1
+        durability: 0
+      40:
+        type: 'LEATHER_BOOTS'
+        color: 0, 0, 0
+      4:
+        type: 'POTION'
+        effects:
+          jump:
+            type: 'JUMP'
+            duration: 1000000
+            amplifier: 0
+      5:
+        type: 'SKULL_ITEM'
+        durability: 3
+        owner: 'netox_max'
+    potions:
+      jump:
+        duration: 1000000
+        amplifier: 0
+zones:
+  spawn-red:
+    display-name: 'Red Spawn'
+    min: 0.5, 50.1, 0.0, 0, 0
+    max: 0.5, 50.1, 0.0, 0, 0
+    settings:
+      enter:
+        allowed: false
+        whom:
+        - blue-team
+      build:
+        allowed: false
+  spawn-blue:
+    display-name: 'Blue Spawn'
+    min: 0.5, 50.1, 0.0, 0, 0
+    max: 0.5, 50.1, 0.0, 0, 0
+    settings:
+      enter:
+        allowed: false
+        whom:
+        - red-team
+      build:
+        allowed: false
+  capture-red:
+    display-name: 'Red Capture Point'
+    min: 0.5, 50.1, 0.0, 0, 0
+    max: 0.5, 50.1, 0.0, 0, 0
+    settings:
+      build:
+        allowed: false
+  capture-blue:
+    display-name: 'Blue Capture Point'
+    min: 0.5, 50.1, 0.0, 0, 0
+    max: 0.5, 50.1, 0.0, 0, 0
+    settings:
+      build:
+        allowed: false

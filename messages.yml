@@ -1,0 +1,71 @@
+# CaptureTheFlag v1.0 by Netux (netox_max) #
+game:
+  broadcast:
+    messages:
+    - '[CTF] &7Help improving the game: Contact with Netux or Sethskye'
+    - '[CTF] &7Tell Netux about any errors you have found.'
+    - '[CTF] &7Use /stats to see your current stats.'
+    - '[CTF] &7Use /channel to switch from TeamChannel and GlobalChannel.'
+    change-status: 'RANDOM'
+  match:
+    countdown:
+      starting-in: ''
+      started: ''
+      attempt: ''
+  commands:
+    join:
+      is-cycling: '&c[CTF] &7Match currently cycling.'
+      full-teams: '&c[CTF] &7All the Teams are full at the moment.'
+      already-team: '&c[CTF] &7You are already on a Team!'
+      no-team: '&c[CTF] &7Team not found.'
+      success: '&6[CTF] &7Joined {t:cc}{t:n}'
+    leave:
+      no-team: '&c[CTF] &7Join a Team first!'
+      timer:
+        start: '&6[CTF] &7Leaving... Please wait &a{s} &7seconds.'
+        failed: '&c[CTF] &7You moved or damaged! Leaving canceled.'
+      success: '&6[CTF] &7You left the game.'
+    switch:
+      is-cycling: '&c[CTF] &7Match currently cycling.'
+      no-team: '&c[CTF] &7To switch join a Team first!'
+      timer:
+        start: '&6[CTF] &7Switching... Please wait &a{s} &7seconds.'
+        failed: '&c[CTF] &7You moved or damaged! Switching canceled.'
+      success: '&6[CTF] &7Switched from Team {ot:cc}{ot:n} &7to Team {nt:cc}{nt:n}&7.'
+    rotation:
+      first: '&6[CTF] &7Rotation:'
+      variables:
+        current: '&6{m:nu}.     &9{m:n} &7by {m:a}&7.'
+        other: '{m:nu}.     &9{m:n} &7by {m:a}&7.'
+    stats:
+    - '&9[CTF] &7Match Stats:'
+    - '        &7Captures: {p:caps} | Steals: {p:stls}'
+    - '        &7Deaths: {p:dths} | Kills: {p:klls}'
+    - '&9[CTF] &7Total Stats:'
+    - '        &7Captures: {p:tcaps} | Steals: {p:tstls}'
+    - '        &7Deaths: {p:tdths} | Kills: {p:tklls}'
+    channel:
+      switch: '&6[CTF] &7Switched to '
+      team: '{t:cc}TeamChannel'
+      global: '&7GlobalChannel'
+  flag:
+    already-captured: ''
+    already-stole: ''
+    returned-to-base: ''
+    dropped: ''
+    captured: ''
+    restoled: ''
+    recovered: ''
+debug:
+  reload: '&6[CTF] &7Due to a reload the current Match has to end.'
+  flag:
+    attempt-spawn-on-location: ''
+    spawned: ''
+    removed: ''
+  match:
+    no-players: ''
+    no-teams: ''
+    no-flags: ''
+    attempting-again: ''
+  command:
+    match-started: ''
